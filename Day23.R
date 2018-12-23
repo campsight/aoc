@@ -5,8 +5,8 @@ library(DEoptim)
 ##------------------------------------------
 # fetch the data
 if (!file.exists("./data")){dir.create("./data")}
-fileUrl <- "https://adventofcode.com/2018/day/5/input.txt"
-inputFile <- "./data/input_45N.txt"
+fileUrl <- "https://adventofcode.com/2018/day/23/input.txt"
+inputFile <- "./data/input_45.txt"
 # download the file if it was not downloaded before
 if (!file.exists(inputFile)) {
     download.file(fileUrl, destfile=inputFile)
