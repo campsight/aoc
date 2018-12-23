@@ -15,6 +15,8 @@ if (!file.exists(inputFile)) {
 ##------------------------------------------
 ## STEP 2: READING THE DATA 
 ##------------------------------------------
+# before reading the file, replace "r=" with "r=+", ">" with "" and "<" by "," in order for this to work. Could have done that
+# in R as well but it was just quicker to do it in a simple text editor and subsequently read a csv in R ...
 nanobotsRaw <- read.csv(file.path(inputFile), header=FALSE, strip.white=TRUE, comment.char="%", stringsAsFactors=FALSE)#colClasses = c("integer","integer"), col.names=c("X","Y"))
 
 nanobots <- data.frame(X=as.integer(nanobotsRaw$V2), Y=as.integer(nanobotsRaw$V3), Z=as.integer(nanobotsRaw$V4), radius=as.integer(nanobotsRaw$V6))
